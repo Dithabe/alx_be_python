@@ -10,6 +10,6 @@ interest = 0.05
 projectedSavings = int(savings * 12 + (savings * 12 * interest))
 
 print (f'Your monthly savings are ${savings}')
-print (f'Projected savings after one year, with interest, is: $int({projectedSavings})')
+print (f'Projected savings after one year, with interest, is: ${projectedSavings}')
 
 

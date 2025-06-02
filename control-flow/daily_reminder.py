@@ -1,25 +1,25 @@
-task_description = input("Enter your task: ")
+description = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ")
 time_bound = input("Is it time-bound? (yes/no): ")
 
 match priority:
     case "high":
         if time_bound == "yes":
-            print(f'\"{task_description}\" is a {task_priority} priority task that requires immediate attention today!')
+            print(f'\"{description}\" is a {priority} priority task that requires immediate attention today!')
         else:
-            print(f'\"{task_description}\" is a {task_priority} priority task. Consider completing it when you have free time.')
+            print(f'\"{description}\" is a {priority} priority task. Consider completing it when you have free time.')
 
-     case "medium":
+    case "medium":
         if time_bound == "yes":
-            print(f'\"{task_description}\" is a {task_priority} priority task that requires immediate attention today!')
+            print(f'\"{description}\" is a {priority} priority task that requires immediate attention today!')
         else:
-            print(f'\"{task_description}\" is a {task_priority} priority task. Consider completing it when you have free time.')
+            print(f'\"{description}\" is a {priority} priority task. Consider completing it when you have free time.')
 
-     case "low":
+    case "low":
         if time_bound == "yes":
-            print(f'\"{task_description}\" is a {task_priority} priority task that requires immediate attention today!')
+            print(f'\"{description}\" is a {priority} priority task that requires immediate attention today!')
         else:
-            print(f'\"{task_description}\" is a {task_priority} priority task. Consider completing it when you have free time.')
-    default:
-        print("Invalid input)
+            print(f'\"{description}\" is a {priority} priority task. Consider completing it when you have free time.')
+    case _:
+        print("Invalid input")
     

@@ -5,8 +5,8 @@ time = input("Is it time-bound? (yes/no): ")
 match task_priority:
     case "high"| "medium" | "low":
         if time == "yes":
-            print(f'\'{task_description}\' is a {task_priority} priority task that requires immediate attention today!')
+            print(f'\"{task_description}\" is a {task_priority} priority task that requires immediate attention today!')
         else:
-            print(f'\'{task_description}\' is a {task_priority} priority task. Consider completing it when you have free time.')
+            print(f'\"{task_description}\" is a {task_priority} priority task. Consider completing it when you have free time.')
 
     

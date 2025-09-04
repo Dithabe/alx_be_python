@@ -17,5 +17,5 @@ class BankAccount:
         
     def display_balance(self):
         print('='*50)
-        print(f"The remaining balance on your account is {self.account_balance}")
+        print(f"Current Balance: ${self.account_balance}")
         print('='*50)

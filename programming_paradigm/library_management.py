@@ -13,11 +13,26 @@ class Library:
         if isinstance(book, Book):
             self._books.append(book)
 
-    def checkout_out_book(title):
-        pass
+    def checkout_out_book(self,title):
+        for book in self._books:
+            if book.title == title and book.is_available():
+                book.check_out()
+                print(f"The book '{title}' has been checked out.")
+                return
+        print(f"The book '{title}' is not available")
 
-    def return_book(title):
-        pass
+    def return_book(self,title):
+        for book in self._books:
+            if book.title == title and not book.is_available():
+                book.return_book()
+                print(f"The book '{title}' has been returned.")
+                return
+        print(f"The book '{title}' is not currently checked out")
 
     def list_available_books(self):
-        pass
+        available_books = [book for book in self._books if book.is_available()]
+        if available_books:
+            for book in available_books:
+                print(f"{book.title} by {book.author}")
+        else:
+            print("No books are currently available.")

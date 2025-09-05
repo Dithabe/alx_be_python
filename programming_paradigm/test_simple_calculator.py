@@ -14,9 +14,10 @@ class testing(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(self.calc.divide(6,3), 2)
 
-    def tes_multiply(self):
+    def test_multiply(self):
         self.assertEqual(self.calc.multiply(8,2), 16)
 
     
+
 
 

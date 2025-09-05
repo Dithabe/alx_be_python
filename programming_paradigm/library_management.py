@@ -4,6 +4,12 @@ class Book:
         self.author = author
         self._is_checked_out = False
 
+    def checkout(self):
+        if not self._is_checked_out:
+            self.is_checkout_out = True
+            return True
+        return False
+
 class Library:
     '''Library class to management book checkouts'''
     def __init__(self):
@@ -18,8 +24,8 @@ class Library:
             if book.title == title and book.is_available():
                 book.check_out()
                 print(f"The book '{title}' has been checked out.")
-                return
-        print(f"The book '{title}' is not available")
+            return !self
+        
 
     def return_book(self,title):
         for book in self._books:
@@ -36,3 +42,4 @@ class Library:
                 print(f"{book.title} by {book.author}")
         else:
             print("No books are currently available.")
+
